@@ -1,12 +1,37 @@
 # Unsupervised Hierarchical Tissue Characterization in Multiplex and Hyperplexed Imaging
 ***Summary***: We present a fully unsupervised framework for the characterization of multiplex immunofluorescence images at single-cell resolution. Our approach begins with the integration of two advanced deep learning-based cell segmentation strategies, followed by a post-processing step to refine segmentation accuracy. We then employ a contrastive learning scheme to extract low-dimensional, label-free representations of individual cells. These embeddings are enriched with morphological descriptors and spatial features using a custom-designed Graph Neural Network that explicitly models cellular interactions. Building on these representations, we implement a hierarchical analysis pipeline: (i) classification of cell types based on phenotypic features, and (ii) neighborhood-level characterization incorporating spatial context. This multi-level strategy enables a detailed and interpretable understanding of both cellular identities and tissue architecture. By linking cellular phenotypes to their spatial environments, our framework provides a powerful tool for unbiased tissue profiling in digital. The pipeline is fully annotation-free and demonstrates scalability across datasets containing between 7 and 43 markers. To our knowledge, this is the first fully unsupervised method capable of analyzing hyperplex immunofluorescence data at this scale. 
-<img src='https://github.com/mariasanguesa/UMITIC/images/Method_Overview.jpg' />
+<img src='https://github.com/mariasanguesa/UMITIC/images/method_overview.jpg' />
 
 ## Index (the usage of this code is explained step by step) 
 [Requirements and installation](#Requirements-and-installation) • [Parameter configuration](#Parameter-configuration) • [Running](#Running) • [Cite](#Citation) 
 
 ## Requirements and installation
+* Tested on Windows 10
+* Tested on Nvidia GeForce RTX 6000 on GPU 
 
+For installation, we recommend creating a new [*anaconda*](https://www.anaconda.com/distribution/) environment with Pytorch (v.1.4.0 or newer). For GPU support, install the versions of CUDA that are compatible with Pytorch's versions.
+```sh
+conda create --name UMITIC python=3.8
+```
+
+Once inside the created environment, install pytorch and pytorch-geometric:
+```sh
+conda install pytorch torchvision torchaudio torchvision cudatoolkit=11.3 -c pytorch
+conda install pyg -c pyg
+```
+
+Now you can install the following libraries using pip:
+```sh
+pip install hyperopt
+pip install xlsxwriter
+pip install matplotlib
+pip install seaborn
+pip install imgaug
+sudo apt-get install python3-opencv 
+pip install tensorboard
+pip install openTSNE
+pip install openpyxl
+```
 ## Citation
 Please cite this paper in case our method or parts of it were helpful in your work.
 ```diff
