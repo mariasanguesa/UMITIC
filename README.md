@@ -10,16 +10,16 @@
 We introduce a comprehensive unsupervised framework for characterizing tissue architecture at single-cell resolution across multiplex/hyperplex imaging modalities. The pipeline includes:
 
 1. **Cell Segmentation**  
-   Dual-model segmentation combining nuclear and cytoplasmic features with refinement post-processing.
+   Dual-model segmentation combining nuclear and cytoplasmatic features with refinement post-processing.
 
 2. **Contrastive Representation Learning**  
-   Self-supervised CNNs extract low-dimensional embeddings from single-cell crops without labels.
+   Self-supervised CNNs extract low-dimensional embeddings from single-cell crops without labels. 
 
 3. **Spatial Embedding with GNNs**  
-   A custom Graph Neural Network models intercellular relationships, integrating morphology and local spatial context.
+   A custom Graph Neural Network models intercellular relationships, integrating local spatial context.
 
 4. **Hierarchical Analysis**  
-   - **Cell-level clustering**: Phenotype-based classification of cell types.  
+   - **Cell-level clustering**: Marker expression and morphology-based classification of cell types.  
    - **Tissue-level analysis**: Spatial neighborhood clustering of the tissue.
 
 This annotation-free, scalable method supports datasets containing 7 to 43+ markers. To our knowledge, it is the first **fully unsupervised** framework capable of processing hyperplex images at this scale.
@@ -32,7 +32,7 @@ This annotation-free, scalable method supports datasets containing 7 to 43+ mark
 	
 	🌍 Scalable to 40+ markers (hyperplex imaging)
 	
-	📊 Interpretable embeddings for both cells and tissue microenvironments
+	📊 Highly interpretable results
 
 ---
 
