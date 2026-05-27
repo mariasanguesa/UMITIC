@@ -1,0 +1,41 @@
+from Code.Cellular_Segmentation.Cellular_Segmentation import cellular_segmentation
+from Code.utils.DatasetParameters import parameters
+
+import gc
+import numpy as np
+gc.set_threshold(0, 0, 0)
+
+def main(path):
+
+    # Select Experiment parameters
+    params = parameters(path) 
+    
+    # Nuclear and cellular segmentation
+    # cellular_segmentation(params)
+    # gc.collect()
+
+    # Run contrastive learning to transform single-cell crops into low-dimensional embeddings
+    from Code.Patch_Contrastive_Learning.Patch_Contrastive_Learning import patch_contrastive_learning
+    patch_contrastive_learning(params) 
+    gc.collect()
+
+    # # Run GNN for spatial-aware embedding generation
+    from Code.Spatial_Contrastive_Learning.Spatial_Contrastive_Learning import spatial_contrastive_learning
+    spatial_contrastive_learning(params)
+    gc.collect()
+    
+    from Code.Clustering.Cell_Type_Assignment import cell_type_assignment
+    # # Assign a cell type to each cell
+    for i in np.arange(0.3, 3, 0.1):
+        params['Leiden_Cell_Type_Resolution'] = i
+        cell_type_assignment(params)
+
+    from Code.Clustering.Neighborhood_Assignment import neighborhood_assignment
+    # Assign a neighborhood to each cell
+    for j in np.arange(0.3, 2, 0.2):
+        params['Leiden_Neighborhood_Resolution'] = j    
+        neighborhood_assignment(params)
+
+if __name__ == "__main__":     
+    path = "Z:/sanguesa.127969/code/mama_exp/good_recurrence/"     
+    main(path) 

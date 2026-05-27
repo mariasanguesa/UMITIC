@@ -1,0 +1,8 @@
+Instrucciones para preparar el environment para la segmentación celular y nuclear. StarDist da muchos problemas sobretodo
+para entrenar con GPU.
+
+- He creado el entorno así : conda env create -f https://raw.githubusercontent.com/CSBDeep/CSBDeep/main/extras/environment-gpu-py3.7-tf2.3.yml
+- Para después instalar StarDist
+- He instalado Microsoft Build Tools : https://visualstudio.microsoft.com/es/visual-cpp-build-tools/ (reiniciar el portátil)
+- Para poder instalar después DeepCell
+- SimpleITK también tengo que descargarlo, para poder hacerlo: pip install SimpleITK --prefer-binary

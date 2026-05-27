@@ -1,0 +1,6 @@
+Para poder correr el código: 
+    - Crear una carpeta donde se almacenará todo el experimento. Dentro de esta carpeta debe estar:
+        - Raw_Data/Images: en esta carpeta meter las imagenes multiplex
+        - Raw_Data/Experiment_Information: en esta carpeta meter un fichero Channels.txt indicando los canales a estudiar
+    - Modificar utils/DatasetParameters.py con los parámetros de este experimento
+    - Ejecutar el script main.py. Primero modificarlo para que el path corresponda a la carpeta de tu experimento
