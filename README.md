@@ -22,7 +22,7 @@ We introduce a comprehensive unsupervised framework for characterizing tissue ar
    - **Cell-level clustering**: Marker expression and morphology-based classification of cell types.  
    - **Tissue-level analysis**: Spatial neighborhood clustering of the tissue.
 
-This annotation-free, scalable method supports datasets containing 7 to 43+ markers. To our knowledge, it is the first **fully unsupervised** framework capable of processing hyperplex images at this scale.
+This annotation-free, scalable method supports datasets containing 7 to 58+ markers. To our knowledge, it is the first **fully unsupervised** framework capable of processing hyperplex images at this scale.
 
 🧠 Highlights: 
 
@@ -30,7 +30,7 @@ This annotation-free, scalable method supports datasets containing 7 to 43+ mark
 	
 	🧬 Integrates both phenotypic and spatial information
 	
-	🌍 Scalable to 40+ markers (hyperplex imaging)
+	🌍 Scalable to 50+ markers (hyperplex imaging)
 	
 	📊 Highly interpretable results
 
