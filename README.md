@@ -91,10 +91,11 @@ python main.py
 ## Citation
 Please cite this paper in case our method or parts of it were helpful in your work.
 ```diff
-@article{x,
-  title={x},
-  author={x},
-  journal={x},
-  year={x}
+@article{umitic2026,
+title={UMITIC: An Unsupervised Framework for the Joint Characterization of Cellular Phenotypes and Spatial Neighborhoods in Multiplex and Hyperplex Immunofluorescence Imaging Data},
+author={Author1 and Author2 and Author3 and others},
+year={2026},
+doi={10.64898/2026.05.29.728633},
+note={Preprint}
 }
 ```
